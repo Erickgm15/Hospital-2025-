@@ -1,26 +1,32 @@
-import java.awt.Color;
+import javax.swing.*;
+import javax.awt.Color;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-
-
+// Clase principal del programa
 public class Main{
 
     public static void main(String[] args) {
         
         // Crear una venta con JFrame 
-
-        JFrame miventana = new JFrame();
-        miventana.setTitle(" Hospital ");
-        miventana.setSize(700,800);
+        JFrame miventana = new JFrame(); // Se crea un nuevo objeto tipo JFrame llamado "miventana"
+        
+        miventana.setTitle(" Hospital "); // Se asigna un título a la ventana
        
+        miventana.setSize(700,500); // Se define el tamaño de la ventana (ancho x alto) 
+       
+        JPanel panelBanner = new JPanel();
+        panelBanner.setSize(500,800);
+        panelBanner.setOpaque(true);
+        panelBanner.setBackground(Color RED);
+        miventana.add(panelBanner);
 
-        // CRear un texto con Jlabel 
 
-        JLabel texto =new JLabel(  );
-        texto.setText("Hola mundo ");
-        miventana.add(texto);
-        miventana.setVisible(true);
+        JPanel pannerBanner2 = new JPanel();
+        pannerBanner2.setSize(500,800);
+        panelBanner2.setOpaque(true);
+        panelBanner2.setBackground(Color BLUE);
+
+    
+        miventana.setVisible(true); // Se hace visible la ventana
         
        
     }
